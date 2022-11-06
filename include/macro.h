@@ -1,5 +1,5 @@
 /*
-** EPITECH PROJECT, 2018
+** Colimaters PROJECT, 2018
 ** macro.h
 ** File description:
 ** Usefull macro

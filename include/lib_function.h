@@ -1,5 +1,5 @@
 /*
-** EPITECH PROJECT, 2018
+** Colimaters PROJECT, 2018
 ** lib_function.h
 ** File description:
 ** prototyped of libs functions
@@ -7,7 +7,7 @@
 
 /**
  * \file lib_function.h
- * \brief File containing all the prototypes of the project's lib
+ * \brief File containing all the prototypes of the project's src
  * \author Darius.M
  */
 

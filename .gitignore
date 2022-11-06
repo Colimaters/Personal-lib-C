@@ -1,0 +1,7 @@
+*.o
+*.a
+test_libmy
+
+.idea
+.vscode
+.vs
