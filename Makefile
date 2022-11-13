@@ -11,7 +11,12 @@
 ##
 
 SRC = $(shell find . -wholename "./src/*.c")
-TSRC = ./test/test_char_is.c
+
+TSRC = ./test/test_char_is.c \
+		./test/test_get_content_file.c \
+		./test/test_get_elem_str.c \
+		./test/test_stwa.c \
+		./test/test_str_compare.c
 #TEST = $(shell find . -wholename "./test/*.c")
 
 OBJ = $(SRC:.c=.o)
@@ -38,7 +43,7 @@ IMPORTANT = $(RED) "=>" $(GREEN)
 HIGHLIGHT = $(RED) "->" $(GREEN)
 CHECK = "✅ "
 
-all: $(NAME)
+all: $(NAME) $(TNAME)
 
 %.o: %.c
 	@$(CC) -c $^ -o $@ $(TEST_FLAGS)
@@ -53,9 +58,9 @@ $(TNAME): test_compile $(OBJ) $(TOBJ)
 test_compile:
 	$(eval TEST_FLAGS := --coverage -lcriterion -lgcov -fprofile-arcs -ftest-coverage)
 
-viewcov:
+viewcov: $(TNAME)
 	@gcovr -e "test/*" -u --html-details -o $(REPORT_NAME).html --html-title $(REPORT_NAME)
-	@xdg-open $(REPORT_NAME).html
+	@#xdg-open $(REPORT_NAME).html
 
 $(NAME): $(OBJ)
 	@ar rc $@ $^

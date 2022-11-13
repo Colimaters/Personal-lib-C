@@ -6,8 +6,6 @@
 */
 
 #include "../include/test_function.h"
-#include <criterion/criterion.h>
-#include <criterion/redirect.h>
 
 Test(char_is, test_char_isnum)
 {
@@ -35,7 +33,7 @@ Test(char_is, test_char_islower)
     cr_assert_eq(char_islower('z'), true);
     cr_assert_eq(char_islower('A'), false);
     cr_assert_eq(char_islower('Z'), false);
-    cr_assert_eq(char_islower('-'), false);
+    cr_assert_eq(char_islower('|'), false);
     cr_assert_eq(char_islower('0'), false);
     cr_assert_eq(char_islower('9'), false);
 }

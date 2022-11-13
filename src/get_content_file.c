@@ -11,7 +11,7 @@ char *get_content_file(const char * const file)
 {
     struct stat sts;
     int fd = open(file, O_RDONLY);
-    int ret = 0;
+    long ret = 0;
     char *buffer = NULL;
 
     if (!file)
@@ -19,10 +19,8 @@ char *get_content_file(const char * const file)
     if (stat(file, &sts) != 0)
         return (my_putstr_err("get_content_file() : stat failed\n"), NULL);
     buffer = smalloc(sts.st_size);
-    if (!buffer) {
-        my_putstr_err("get_content_file() : buffer was NULL\n");
-        return (NULL);
-    }
+    if (!buffer)
+        return (my_putstr_err("get_content_file() : buffer was NULL\n"), NULL);
     ret = read(fd, buffer, sts.st_size);
     if (ret == -1)
         return (my_putstr_err("get_content_file() : read failed\n"), NULL);

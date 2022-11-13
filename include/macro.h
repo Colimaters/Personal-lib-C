@@ -14,6 +14,8 @@
 #ifndef MACRO_H_
 #define MACRO_H_
 
+//#define ERROR_NULL(var)  __func__ "(): " #var " was NULL\n"
+
 /**
  * \brief In case of success
  */
