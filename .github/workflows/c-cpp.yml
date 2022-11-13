@@ -18,4 +18,4 @@ jobs:
     - name: run test
       run: make test_libmy
     - name: generate report
-      run: make viewcov:
+      run: make viewcov
