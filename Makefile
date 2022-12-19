@@ -46,7 +46,7 @@ IMPORTANT = $(RED) "=>" $(GREEN)
 HIGHLIGHT = $(RED) "->" $(GREEN)
 CHECK = "✅ "
 
-all: $(NAME) $(TNAME)
+all: $(NAME)
 
 %.o: %.c
 	@$(CC) -c $^ -o $@ $(TEST_FLAGS)
