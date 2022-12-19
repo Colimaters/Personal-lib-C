@@ -16,6 +16,9 @@ TSRC = ./test/test_char_is.c \
 		./test/test_get_content_file.c \
 		./test/test_get_elem_str.c \
 		./test/test_stwa.c \
+		./test/test_str_is.c \
+		./test/test_my_strcpy.c \
+		./test/test_my_strcat.c \
 		./test/test_str_compare.c
 #TEST = $(shell find . -wholename "./test/*.c")
 
