@@ -10,7 +10,7 @@
 char *tab_to_str(const char * const * const tab)
 {
     char *res = NULL;
-    int len = 0;
+    size_t len = 0;
     int k = -1;
 
     if (!tab)
