@@ -22,6 +22,8 @@ TSRC = ./test/test_char_is.c \
 		./test/test_my_strcat.c \
 		./test/test_int_to_str.c \
 		./test/test_str_compare.c \
+		./test/test_str_to_int.c \
+		./test/test_my_strdup.c \
 		./test/test_tab_to_str.c
 #TEST = $(shell find . -wholename "./test/*.c")
 

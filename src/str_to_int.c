@@ -9,20 +9,15 @@
 
 int str_to_int(const char * const str)
 {
+    int mul = 1;
     int res = 0;
-    int i = 0;
-    int dec = 1;
-    char *tmp = NULL;
 
     if (!str)
         return (my_putstr_err("str_to_int() : str was NULL\n"), 0);
-    tmp = my_revstr(str);
-    while (tmp[i]) {
-        res = (tmp[i] - 48) * dec + res;
-        dec *= 10;
-        ++i;
-    }
-    free(tmp);
+    for (unsigned long i = my_strlen(str) - 1; char_isnum(str[i]); --i, mul *= 10)
+        res = (str[i] - 48) * mul + res;
+    if (str[0] == '-')
+        res *= -1;
     return (res);
 }
 
