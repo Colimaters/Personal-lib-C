@@ -22,10 +22,7 @@ jobs:
     - name: install gcovr
       shell: pwsh
       run: |
-          sudo apt-get install python3.6
-          curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py"
-          sudo python get-pip.py
-          sudo pip install gcovr
+          pip install gcovr
     
     - name: build lib normally
       run: make
