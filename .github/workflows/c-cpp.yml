@@ -8,16 +8,18 @@ on:
 
 jobs:
   build:
-
+    name: test lib
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v3
-    - name: installa requirement
-      run: sudo apt install libcriterion-dev
-    - name: create lib
+    
+    
+    - name: Install Criterion
+      run: ./install_criterion.sh
+    
+    - name: build lib normally
       run: make
-    - name: run test
+      
+    - name: launch test
       run: make test_libmy
-    - name: generate report
-      run: make viewcov
