@@ -13,6 +13,7 @@
 SRC = $(shell find . -wholename "./src/*.c")
 
 TSRC = ./test/test_char_is.c \
+		./test/test_get_next_line.c \
 		./test/test_get_content_file.c \
 		./test/test_get_elem_str.c \
 		./test/test_my_getnbr.c \
@@ -26,7 +27,9 @@ TSRC = ./test/test_char_is.c \
 		./test/test_my_strdup.c \
 		./test/test_my_strlen.c \
 		./test/test_my_tablen.c \
+		./test/test_my_revstr.c \
 		./test/test_tab_to_str.c
+
 #TEST = $(shell find . -wholename "./test/*.c")
 
 OBJ = $(SRC:.c=.o)

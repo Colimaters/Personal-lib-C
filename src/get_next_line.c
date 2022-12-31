@@ -9,14 +9,19 @@
 
 char *gnl(int fd, short flag)
 {
-    char *line = smalloc(2);
-    char *tmp = smalloc(2);
-    int ret = 0;
+    char *line = NULL;
+    char *tmp = NULL;
+    ssize_t ret = 0;
     int c = 0;
 
+    if (fd < 0)
+        return (my_putstr_err("gnl() : fd was NULL\n"), NULL);
+    line = smalloc(2);
+    tmp = smalloc(2);
+    if (!line || !tmp)
+        return (my_putstr_err("gnl() : line or tmp was NULL\n"), NULL);
     do {
         ret = read(fd, tmp, 1);
-        tmp[ret] = '\0';
         line = my_strcat(line, tmp, 1);
         ++c;
     } while (tmp[0] != '\n' && ret > 0);
