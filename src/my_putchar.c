@@ -20,8 +20,7 @@ void p_char(va_list ap)
     my_putchar(va_arg(ap, int));
 }
 
-void p_prct(va_list ap)
+void p_prct(__attribute__((unused)) va_list ap)
 {
-    ap = ap;
     my_putchar('%');
 }

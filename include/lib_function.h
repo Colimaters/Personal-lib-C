@@ -114,6 +114,12 @@ void free_str(unsigned int c, ...);
  * \param ... All str pointer to be free
  */
 void free_tab(unsigned int c, ...);
+/**
+ * \brief Allows to free several int ptr at the same time
+ * \param c Number of int ptr to free
+ * \param ... All int ptr to be free
+ */
+void free_int(unsigned int c, ...);
 /** @} */
 /*#################################################################*/
 

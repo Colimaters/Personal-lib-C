@@ -31,3 +31,13 @@ void free_tab(unsigned int c, ...)
     }
     va_end(ap);
 }
+
+void free_int(unsigned int c, ...)
+{
+    va_list ap;
+
+    va_start(ap, c);
+    for (unsigned short i = 0; i < c; ++i)
+        free(va_arg(ap, int *));
+    va_end(ap);
+}
