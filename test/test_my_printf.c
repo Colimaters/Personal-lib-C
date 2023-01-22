@@ -165,3 +165,30 @@ Test(test_my_printf, p_flag)
 
     cr_assert_eq(my_printf(to_print, expected), 0);
 }
+
+Test(test_my_printf, t_flag_null, .init = cr_redirect_stderr)
+{
+    const char * const to_print = "%t\n";
+    const char * const expected = "my_puttab() : tab was NULL\n\n";
+
+    my_printf(to_print, NULL);
+    cr_assert_stderr_eq_str(expected);
+}
+
+Test(test_my_printf, S_flag_null, .init = cr_redirect_stderr)
+{
+    const char * const to_print = "%S\n";
+    const char * const expected = "my_putstrnp() : str was NULL\n\n";
+
+    my_printf(to_print, NULL);
+    cr_assert_stderr_eq_str(expected);
+}
+
+Test(test_my_printf, s_flag_null, .init = cr_redirect_stderr)
+{
+    const char * const to_print = "%s\n";
+    const char * const expected = "my_putstr() : str was NULL\n\n";
+
+    my_printf(to_print, NULL);
+    cr_assert_stderr_eq_str(expected);
+}
