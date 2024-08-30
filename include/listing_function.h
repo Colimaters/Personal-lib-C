@@ -10,7 +10,7 @@
  * \brief file including all the other headers
  * with all the prototypes of the project's functions
  * as well as all the necessary inclusions.
- * \author Darius.M
+ * \author Colimaters
  */
 
 #ifndef LISTING_FUNCTION_H_
@@ -27,9 +27,9 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 
-//Program
+// Program
 
-//Info
+// Info
 /**
  * \brief If str is equal to "-h" or "--help" displays the program help.
  * \param [in] str Corresponds to the 1st argument of the program (av [1])

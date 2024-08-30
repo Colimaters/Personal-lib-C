@@ -8,7 +8,7 @@
 /**
  * \file struct.h
  * \brief File containing all project structures
- * \author Darius.M
+ * \author Colimaters
  */
 
 #ifndef STRUCT_H_
@@ -21,10 +21,11 @@
  *
  * It's a template.
  */
-typedef struct data_s {
+typedef struct data_s
+{
     struct data_s *next; /*!< Pointer to the next element */
     struct data_s *prev; /*!< Pointer to the previous element */
-}data_t;
+} data_t;
 
 /**
  * \brief Generic check structure for double-chained lists
@@ -33,9 +34,10 @@ typedef struct data_s {
  *
  * It's a template.
  */
-typedef struct all_s {
+typedef struct all_s
+{
     data_t *head; /*!< Head of the chained list */
     data_t *tail; /*!< Tail of the chained list */
-}all_t;
+} all_t;
 
 #endif /* STRUCT_H_ */

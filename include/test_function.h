@@ -8,7 +8,7 @@
 /**
  * \file test_function.h
  * \brief File containing all the prototypes of the project's src
- * \author Darius.M
+ * \author Colimaters
  */
 
 #ifndef TEST_FUNCTION_H_
